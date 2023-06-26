@@ -19,12 +19,12 @@ export const AddCategory = ({ setCategories }: AddCategoryProps) => {
     }
   };
   return (
-    <form onSubmit={handelSubmit}>
+    <form className="search" onSubmit={handelSubmit}>
       <input
         type="text"
         value={inputValue}
         onChange={handleOnChange}
-        placeholder="Write a tex ..."
+        placeholder="Enter a name to search for GIFs"
       />
       <button type="submit"> Search</button>
     </form>

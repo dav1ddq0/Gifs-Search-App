@@ -11,7 +11,10 @@ const GifApp = () => {
 
   return (
     <>
-      <h2>GifApp</h2>
+      <div className="header">
+        <h2>GifApp</h2>
+      </div>
+
       <AddCategory setCategories={setCategories} />
       <hr />
       <ol>
