@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import CloseIcon from "../icons/CloseIcon";
 interface AddCategoryProps {
   setCategories: React.Dispatch<React.SetStateAction<string[]>>;
 }
@@ -18,6 +18,16 @@ export const AddCategory = ({ setCategories }: AddCategoryProps) => {
       setInputValue("");
     }
   };
+
+  const handleCloseOnClick = () => {
+    setInputValue("");
+  };
+
+  const ClearInput = (
+    <button type="button" onClick={handleCloseOnClick}>
+      <CloseIcon width={20} height={20} />
+    </button>
+  );
   return (
     <form className="search" onSubmit={handelSubmit}>
       <input
@@ -26,6 +36,9 @@ export const AddCategory = ({ setCategories }: AddCategoryProps) => {
         onChange={handleOnChange}
         placeholder="Enter a name to search for GIFs"
       />
+      {inputValue && ClearInput}
+
+      <span className="close-icon"></span>
       <button type="submit"> Search</button>
     </form>
   );
