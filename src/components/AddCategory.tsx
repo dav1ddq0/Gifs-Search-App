@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import CloseIcon from "../icons/CloseIcon";
 interface AddCategoryProps {
   setCategories: React.Dispatch<React.SetStateAction<string[]>>;
+  setCurrentCategory: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const AddCategory = ({ setCategories }: AddCategoryProps) => {
+export const AddCategory = ({
+  setCategories,
+  setCurrentCategory,
+}: AddCategoryProps) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -16,6 +20,7 @@ export const AddCategory = ({ setCategories }: AddCategoryProps) => {
     if (inputValue.trim().length > 2) {
       setCategories((prevState) => [inputValue, ...prevState]);
       setInputValue("");
+      setCurrentCategory(inputValue);
     }
   };
 
@@ -24,7 +29,7 @@ export const AddCategory = ({ setCategories }: AddCategoryProps) => {
   };
 
   const ClearInput = (
-    <button type="button" onClick={handleCloseOnClick}>
+    <button type="button" title="clear" onClick={handleCloseOnClick}>
       <CloseIcon width={20} height={20} />
     </button>
   );
@@ -38,7 +43,7 @@ export const AddCategory = ({ setCategories }: AddCategoryProps) => {
       />
       {inputValue && ClearInput}
 
-      <span className="close-icon"></span>
+      {/* <span className="close-icon"></span> */}
       <button type="submit"> Search</button>
     </form>
   );

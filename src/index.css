@@ -2,18 +2,19 @@
   font-family: Helvetica, Arial, sans-serif;
 }
 
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url('./assets/fonts/SFProText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   padding: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-items: center;
+  justify-content: flex-start;
 }
-
-
-
-
-
 
 
 .card-grid{
@@ -30,6 +31,7 @@ body {
   border-radius: 6px;
   margin-bottom:4px;
   margin-right: 10px;
+  margin-top: 10px;
   border: 3px solid #000000;
   overflow: hidden;
 }
@@ -49,7 +51,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 10px 20px 10px 60px;
-  height: 10vh;
+  height: 15vh;
   justify-content: center;
 }
 
@@ -57,8 +59,10 @@ body {
   font-size: 1.2rem;
   width: 60%;
   height: 40%;
+  min-height: 30px;
   border-radius: 4px; 
-  border: 2px solid #000000da;;
+  border: 2px solid #000000da;
+ 
 }
 
 .search input:focus {
@@ -68,11 +72,18 @@ body {
 }
 
 .search button[type="submit"] {
-  background-color: #3f51b5;
-  height: 45%;
+  background-color: rgba(45, 127, 249, 1);
+  height: 35%;
+  padding: 7px 12px;
+  min-height: 30px;
+  align-items: center;
+  font-family: SF Pro Text;
+  font-weight: 600  ;
+  line-height: 18px;
+  font-size: 19px;
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 3px;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -80,12 +91,13 @@ body {
 }
 
 .search button[type="submit"]:hover {
-  background-color: #0916ad;
+  background-color: rgba(11, 107, 250, 0.764);
+
 }
 
 .search button[type="button"] {
   background-color: #dc0909;
-  height: 35%;
+  height: 25%;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -101,6 +113,91 @@ body {
 }
 .search svg {
   color: #fff;
+}
+
+.tag-container{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px 8px;
+  justify-content: flex-start;
+  height: 10vh;
+
+}
+.tag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  gap: 3px;
+  padding: 0px 8px;
+  height: 8vh;
+  width: auto; 
+}
+
+#close-category-button{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  border: none;
+  padding: 0px 8px;
+  align-items: center;
+  background-color: #b53f3f55;
+  color: #ffffff;
+  font-size: 16px;
+  font-family:SF Pro Text;
+  line-height: 18px;
+  border-radius: 15px; 
+  min-height: 20px;
+  width: 20px;
+}
+#close-category-button:hover{
+  background-color: #b53f3f;
+  cursor: pointer;
+  
+}
+
+#category-button {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start;
+  justify-content: center;
+  align-items: center;
+  background-color: #3f51b5;
+  color: #102046;
+  background-color: rgba(207, 223, 255, 1);
+  font-size: 17px;
+  font-family: SF Pro Text;
+  line-height: 18px;
+  border-radius: 100px; 
+  height: 20px;
+  max-height: 45px;
+  width: auto;
+  border: none;
+}
+
+#category-button:hover {
+  cursor: pointer;
+}
+
+
+
+
+close {
+  background-color: none;
+  border: none  ;
+  color: white;
+  height: 10px;
+  border-radius: none;
+
+}
+.close button{
+  background-color: none;
+  border: none  ;
+  color: white;
+  height: 10px;
+  border-radius: none;
 }
 
 
