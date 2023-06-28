@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getGifs } from "../helpers/getGifs";
-import { Gif } from "../helpers/Gif";
+import { Gif } from "../helpers/interfaces/Gif";
 
 interface State {
   data: Gif[];

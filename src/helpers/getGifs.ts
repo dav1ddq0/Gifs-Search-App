@@ -1,5 +1,5 @@
 import { GifAPIResponse } from "../components/GifAPIResponse";
-import { Gif } from "./Gif";
+import { Gif } from "./interfaces/Gif";
 
 export const getGifs = async (category: string) => {
   const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(

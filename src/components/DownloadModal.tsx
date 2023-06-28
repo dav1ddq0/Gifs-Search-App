@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { GifIcon, ArrowDownloadIcon } from "../icons";
-
+import { GifIcon, ArrowDownloadIcon, CloseIcon } from "../icons";
+import { downloadGifFile } from "../helpers/downloadGifFile";
 import "./DownloadModal.css";
 
 interface DownloadModalProps {
@@ -19,27 +19,28 @@ export const DownloadModal = ({
   console.log(url);
 
   const handleDownloadImage = () => {
-    fetch(url)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = `${filename}.gif`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      });
+    downloadGifFile(url, filename);
   };
+
   return (
     <div className="darkBG">
-      {/* <p>{title} GIF</p> */}
       <div className="modal-form animate__animated animate__backInDown">
-        <h1> Download </h1>
+        <div className="modal-main">
+          <h1> Download </h1>
+          <button
+            title="Close"
+            onClick={() => {
+              setIsOpen(false);
+            }}
+          >
+            <CloseIcon width={30} height={30} />
+          </button>
+        </div>
+
         <h2>{title}</h2>
+
         <div className="modal-save-as">
           <p> Save as: </p>
-
           <input
             type="text"
             placeholder="filename"
@@ -51,6 +52,7 @@ export const DownloadModal = ({
         </div>
 
         <button
+          title="Get Gif File"
           onClick={() => {
             handleDownloadImage();
             setIsOpen(false);
