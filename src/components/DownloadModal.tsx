@@ -18,6 +18,19 @@ export const DownloadModal = ({
   console.log(title);
   console.log(url);
 
+  const handleDownloadImage = () => {
+    fetch(url)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = `${filename}.gif`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+  };
   return (
     <div className="darkBG">
       {/* <p>{title} GIF</p> */}
@@ -37,7 +50,12 @@ export const DownloadModal = ({
           />
         </div>
 
-        <button onClick={() => setIsOpen(false)}>
+        <button
+          onClick={() => {
+            handleDownloadImage();
+            setIsOpen(false);
+          }}
+        >
           <ArrowDownloadIcon width={20} height={20} />
           <GifIcon width={30} height={30} />
         </button>
