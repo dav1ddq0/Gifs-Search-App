@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CloseIcon from "../icons/CloseIcon";
+import { CloseIcon } from "../icons/CloseIcon";
 
 interface GifTagProps {
   category: string;

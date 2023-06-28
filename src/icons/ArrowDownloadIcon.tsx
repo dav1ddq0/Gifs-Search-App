@@ -5,7 +5,10 @@ interface ArrowDownloadIconProps {
   height: Number;
 }
 
-const ArrowDownloadIcon = ({ width, height }: ArrowDownloadIconProps) => {
+export const ArrowDownloadIcon = ({
+  width,
+  height,
+}: ArrowDownloadIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,5 +27,3 @@ const ArrowDownloadIcon = ({ width, height }: ArrowDownloadIconProps) => {
     </svg>
   );
 };
-
-export default ArrowDownloadIcon;

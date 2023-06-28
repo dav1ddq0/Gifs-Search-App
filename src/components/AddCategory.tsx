@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CloseIcon from "../icons/CloseIcon";
+import { CloseIcon } from "../icons";
 interface AddCategoryProps {
   setCategories: React.Dispatch<React.SetStateAction<string[]>>;
   setCurrentCategory: React.Dispatch<React.SetStateAction<string>>;

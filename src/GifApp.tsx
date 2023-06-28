@@ -4,6 +4,7 @@ import { GifGrid } from "./components/GifGrid";
 import { GifTag } from "./components/GifTag";
 
 const GifApp = () => {
+  // const [isOpen, setIsOpen] = useState(false);
   const [categories, setCategories] = useState<string[]>(() => {
     const localCategories = localStorage.getItem("categories");
     return localCategories ? JSON.parse(localCategories) : [];

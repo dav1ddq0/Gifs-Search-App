@@ -5,7 +5,7 @@ interface CloseIconProps {
   height: Number;
 }
 
-const CloseIcon = ({ width, height }: CloseIconProps) => {
+export const CloseIcon = ({ width, height }: CloseIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -24,5 +24,3 @@ const CloseIcon = ({ width, height }: CloseIconProps) => {
     </svg>
   );
 };
-
-export default CloseIcon;
