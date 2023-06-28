@@ -10,10 +10,12 @@ export const GifGridItem = ({ title, url }: GifGridItemProps) => {
   return (
     <div className="card animate__animated animate__bounce">
       <img src={url} alt={title} />
-      <p> {title}</p>
-      <button title="Download Gif">
-        <ArrowDownloadIcon width={30} height={30} />
-      </button>
+      <div className="card-info">
+        <p> {title}</p>
+        <button title="Download Gif">
+          <ArrowDownloadIcon width={30} height={30} />
+        </button>
+      </div>
     </div>
   );
 };
