@@ -11,6 +11,7 @@ export const GifTag = ({
   category,
   setCategories,
   setCurrentCategory,
+
   handleNextItem,
 }: GifTagProps) => {
   const handleOnClickClose = () => {

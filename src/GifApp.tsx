@@ -4,7 +4,6 @@ import { GifGrid } from "./components/GifGrid";
 import { GifTag } from "./components/GifTag";
 import { Footer } from "./components/Footer";
 const GifApp = () => {
-  // const [isOpen, setIsOpen] = useState(false);
   const [categories, setCategories] = useState<string[]>(() => {
     const localCategories = localStorage.getItem("categories");
     return localCategories ? JSON.parse(localCategories) : [];
@@ -24,6 +23,17 @@ const GifApp = () => {
 
   const handleNextItem = (newCurrent: string) => {
     setCurrentCategory(newCurrent);
+    if (newCurrent === "") {
+      resetPagination();
+    }
+  };
+
+  const resetPagination = () => {
+    setPagination({
+      count: 0,
+      offset: 0,
+      limit: 8,
+    });
   };
 
   useEffect(() => {
