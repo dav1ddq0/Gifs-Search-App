@@ -5,19 +5,33 @@ import { Gif } from "../helpers/interfaces/Gif";
 interface State {
   data: Gif[];
   loading: boolean;
+  count: number;
 }
 
-export const useFetchGifs = (category: string) => {
+export const useFetchGifs = (
+  category: string,
+  offset: number,
+  limit: number
+) => {
   const [state, setState] = useState<State>({
     data: [],
     loading: true,
+    count: 0,
   });
 
   useEffect(() => {
-    getGifs(category).then((imgs) =>
-      setTimeout(() => setState({ data: imgs, loading: false }), 0)
+    getGifs(category, offset, limit).then(({ imgs, pagination }) =>
+      setTimeout(
+        () =>
+          setState({
+            data: imgs,
+            loading: false,
+            count: pagination.total_count,
+          }),
+        0
+      )
     );
-  }, [category]);
+  }, [category, offset, limit]);
 
   return state;
 };

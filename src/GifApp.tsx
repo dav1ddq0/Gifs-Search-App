@@ -14,6 +14,14 @@ const GifApp = () => {
     return localCurrentCategory ? JSON.parse(localCurrentCategory) : "";
   });
 
+  const [pagination, setPagination] = useState({
+    count: 0,
+    offset: 0,
+    limit: 10,
+  });
+
+  const { count, offset, limit } = pagination;
+
   const handleNextItem = (newCurrent: string) => {
     setCurrentCategory(newCurrent);
   };
@@ -50,8 +58,20 @@ const GifApp = () => {
         })}
       </div>
 
-      {currentCategory && <GifGrid category={currentCategory} />}
-      <Footer />
+      {currentCategory && (
+        <GifGrid
+          category={currentCategory}
+          offset={offset}
+          limit={limit}
+          setPagination={setPagination}
+        />
+      )}
+      <Footer
+        setPagination={setPagination}
+        count={count}
+        offset={offset}
+        limit={limit}
+      />
     </>
   );
 };

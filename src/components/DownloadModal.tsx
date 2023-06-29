@@ -6,7 +6,7 @@ import "./DownloadModal.css";
 interface DownloadModalProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   title: string;
-  url: string;
+  url?: string;
 }
 
 export const DownloadModal = ({
@@ -19,7 +19,7 @@ export const DownloadModal = ({
   console.log(url);
 
   const handleDownloadImage = () => {
-    downloadGifFile(url, filename);
+    downloadGifFile(filename, url);
   };
 
   return (

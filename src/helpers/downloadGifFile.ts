@@ -1,4 +1,5 @@
-export const downloadGifFile = (url: string, filename: string) => {
+export const downloadGifFile = (filename: string, url?: string) => {
+  if (!url) return;
   fetch(url)
     .then((response) => response.blob())
     .then((blob) => {

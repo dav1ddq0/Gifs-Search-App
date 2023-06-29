@@ -4,7 +4,7 @@ import { ArrowDownloadIcon } from "../icons";
 import { DownloadModal } from "./DownloadModal";
 interface GifGridItemProps {
   title: string;
-  url: string;
+  url?: string;
 }
 
 export const GifGridItem = ({ title, url }: GifGridItemProps) => {

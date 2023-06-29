@@ -1,4 +1,4 @@
-export interface GifAPIResponse {
+export interface GifObjectAPI {
   analytics: {
     onload: any;
     onclick: any;
