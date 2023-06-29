@@ -36,8 +36,8 @@ export const DownloadModal = ({
             <CloseIcon width={30} height={30} />
           </button>
         </div>
-
-        <h2>{title}</h2>
+        <img src={url} alt={`${title}-gif`}></img>
+        {/* <h2>{title}</h2> */}
 
         <div className="modal-save-as">
           <p> Save as: </p>

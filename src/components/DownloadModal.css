@@ -14,8 +14,8 @@
 }
 
 .modal-form {
-    width: 30vw;
-    height: 40vh    ;
+    width: 25vw;
+    height: 60vh    ;
     background: white;
     color: white;
     z-index: 2;
@@ -74,7 +74,7 @@
     align-items: center;
     justify-content: flex-start;
     gap:10px;
-    width: 60%;
+    width: 80%;
     height: 10%;
     padding: 10px;
     margin-top: 10%;
@@ -144,6 +144,14 @@
     line-height: 13px;
     flex-grow: 1;
     text-align: center;
+}
+
+.modal-form img{
+    max-width: 300px;
+    max-height: 200px;
+    border-radius: 8px;
+    margin-top: 10%;
+    
 }
 
 h2 {

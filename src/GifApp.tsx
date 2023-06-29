@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 import { GifTag } from "./components/GifTag";
-
+import { Footer } from "./components/Footer";
 const GifApp = () => {
   // const [isOpen, setIsOpen] = useState(false);
   const [categories, setCategories] = useState<string[]>(() => {
@@ -49,7 +49,9 @@ const GifApp = () => {
           );
         })}
       </div>
+
       {currentCategory && <GifGrid category={currentCategory} />}
+      <Footer />
     </>
   );
 };
