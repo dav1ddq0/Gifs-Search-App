@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b65216a.css",
+    "main.js": "/static/js/main.b703067c.js",
+    "static/media/SFProText-Regular.ttf": "/static/media/SFProText-Regular.90da7ab18293ca42e335.ttf",
+    "index.html": "/index.html",
+    "main.2b65216a.css.map": "/static/css/main.2b65216a.css.map",
+    "main.b703067c.js.map": "/static/js/main.b703067c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b65216a.css",
+    "static/js/main.b703067c.js"
+  ]
+}
