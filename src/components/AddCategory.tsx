@@ -4,11 +4,13 @@ import "./AddCategory.css";
 interface AddCategoryProps {
   setCategories: React.Dispatch<React.SetStateAction<string[]>>;
   setCurrentCategory: React.Dispatch<React.SetStateAction<string>>;
+  categories: string[];
 }
 
 export const AddCategory = ({
   setCategories,
   setCurrentCategory,
+  categories,
 }: AddCategoryProps) => {
   const [inputValue, setInputValue] = useState("");
 
@@ -19,6 +21,10 @@ export const AddCategory = ({
   const handelSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (inputValue.trim().length > 2) {
+      if (categories.includes(inputValue)) {
+        return;
+      }
+
       setCategories((prevState) => [inputValue, ...prevState]);
       setInputValue("");
       setCurrentCategory(inputValue);

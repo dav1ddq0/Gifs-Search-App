@@ -52,6 +52,7 @@ const GifApp = () => {
       <AddCategory
         setCategories={setCategories}
         setCurrentCategory={setCurrentCategory}
+        categories={categories}
       />
 
       <div className="tag-container">
