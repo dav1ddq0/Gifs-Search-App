@@ -17,7 +17,7 @@ const GifApp = () => {
   const [pagination, setPagination] = useState({
     count: 0,
     offset: 0,
-    limit: 10,
+    limit: 8,
   });
 
   const { count, offset, limit } = pagination;

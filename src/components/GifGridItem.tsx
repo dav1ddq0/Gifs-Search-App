@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "animate.css";
 import { ArrowDownloadIcon } from "../icons";
 import { DownloadModal } from "./DownloadModal";
+import "./GifGridItem.css";
 interface GifGridItemProps {
   title: string;
   url?: string;

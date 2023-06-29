@@ -1,0 +1,49 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    margin-bottom:4px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: none;
+    overflow: hidden;
+  
+    box-shadow: 0 1px 5px  7px rgba(45, 140, 219, 0.322); 
+    
+  }
+  
+  .card p {
+    padding: 5px;
+    text-align: center;
+    
+    font-family: SF Pro Text;
+  }
+  
+  .card button {
+    background-color: #ffffff;
+    border: none;
+    color: rgba(16, 32, 70, 1);
+    height: 40px;
+    width: 40px;
+    padding: 2px 4px 10px 4px;
+    border-radius: 25px;
+  }
+  .card button:hover {
+    background-color: rgba(207, 223, 255, 1);
+    box-shadow: 0px 10px 10px 0px rgba(6, 67, 181, 0.42); 
+    cursor: pointer;
+  }
+  
+  .card img {
+    max-height: 190px;
+  }
+  .card-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4px 10px 4px 4px;
+    gap: 8px;
+  }
+  

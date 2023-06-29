@@ -1,0 +1,39 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+}
+.pagination p {
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(16, 32, 70, 1);
+    text-shadow: 0px 0px 20px rgb(45, 127, 249); 
+}
+
+#disabled {
+    background-color: rgba(207, 223, 255, 0.5);
+    color: rgba(16, 32, 70, 0.5);
+}
+
+.pagination button {
+    background-color: rgba(207, 223, 255, 1);
+    border: none;
+    color: rgba(16, 32, 70, 1);
+    height: 40px;
+    width: 40px;
+    padding: 2px 4px 10px 4px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination button:hover {
+    cursor: pointer;
+}
+

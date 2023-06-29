@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { CloseIcon } from "../icons";
+import { CloseIcon, SearchIcon } from "../icons";
+import "./AddCategory.css";
 interface AddCategoryProps {
   setCategories: React.Dispatch<React.SetStateAction<string[]>>;
   setCurrentCategory: React.Dispatch<React.SetStateAction<string>>;
@@ -30,21 +31,25 @@ export const AddCategory = ({
 
   const ClearInput = (
     <button type="button" title="clear" onClick={handleCloseOnClick}>
-      <CloseIcon width={20} height={20} />
+      <CloseIcon width={30} height={30} />
     </button>
   );
   return (
     <form className="search" onSubmit={handelSubmit}>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={handleOnChange}
-        placeholder="Enter a name to search for GIFs"
-      />
-      {inputValue && ClearInput}
+      <div className="text-input">
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleOnChange}
+          placeholder="Enter a name to search for GIFs"
+        />
+        {inputValue && ClearInput}
+      </div>
 
-      {/* <span className="close-icon"></span> */}
-      <button type="submit"> Search</button>
+      <button type="submit" title="Search">
+        {" "}
+        <SearchIcon width={30} height={30} />
+      </button>
     </form>
   );
 };

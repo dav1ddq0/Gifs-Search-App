@@ -7,11 +7,9 @@ export const getGifs = async (
   offset: number,
   limit: number
 ) => {
-  console.log(limit);
-
   const url = `https://api.giphy.com/v1/gifs/search?q=${encodeURI(
     category
-  )}&limit=${limit}&offset=${offset}&api_key=ggtd2ZKHy8Tdzhc7MwUxNM9RXXbC6Msu`;
+  )}&limit=${limit}&offset=${offset}&api_key=${process.env.REACT_APP_API_KEY}`;
 
   const resp = await fetch(url);
   const { data, pagination }: { data: GifObjectAPI[]; pagination: Pagination } =

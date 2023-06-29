@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { GifGridItem } from "./GifGridItem";
 import { useFetchGifs } from "../hooks/useFetchGifs";
-
+import "./GifGrid.css";
 interface GifGridProps {
   category: string;
   offset: number;
